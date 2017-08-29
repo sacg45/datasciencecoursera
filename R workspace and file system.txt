@@ -1,0 +1,386 @@
+
+> swirl()
+
+| Welcome to swirl! Please sign in. If you've been here before, use the same name as you did then. If you are new, call yourself something unique.
+
+What shall I call you? sergiocardona
+
+| Please choose a course, or type 0 to exit swirl.
+
+1: R Programming
+2: Take me to the swirl course repository!
+
+Selection: 1
+
+| Please choose a lesson, or type 0 to return to course menu.
+
+ 1: Basic Building Blocks      2: Workspace and Files        3: Sequences of Numbers       4: Vectors                    5: Missing Values             6: Subsetting Vectors         7: Matrices and Data Frames
+ 8: Logic                      9: Functions                 10: lapply and sapply         11: vapply and tapply         12: Looking at Data           13: Simulation                14: Dates and Times         
+15: Base Graphics             
+
+Selection: 2
+  |                                                                                                                                                                                                           |   0%
+
+| In this lesson, you'll learn how to examine your local workspace in R and begin to explore the relationship between your workspace and the file system of your machine.
+
+...nxt()
+  |=====                                                                                                                                                                                                      |   3%
+| Because different operating systems have different conventions with regards to things like file paths, the outputs of these commands may vary across machines.
+
+...nxt()
+  |==========                                                                                                                                                                                                 |   5%
+| However it's important to note that R provides a common API (a common set of commands) for interacting with files, that way your code will work across different kinds of computers.
+
+...nxt()
+  |================                                                                                                                                                                                           |   8%
+| Let's jump right in so you can get a feel for how these special functions work!
+
+...nxt()
+  |=====================                                                                                                                                                                                      |  10%
+| Determine which directory your R session is using as its current working directory
+| using getwd().
+
+> getwd()
+[1] "/Users/sergiocardona/Documents/Traning/Coursera/R Programming"
+
+| You got it!
+  |==========================                                                                                                                                                                                 |  13%
+| List all the objects in your local workspace using ls().
+
+> ls()
+character(0)
+
+| All that practice is paying off!
+  |===============================                                                                                                                                                                            |  15%
+| Some R commands are the same as their equivalents commands on Linux or on a Mac. Both
+| Linux and Mac operating systems are based on an operating system called Unix. It's
+| always a good idea to learn more about Unix!
+
+...nxt()
+  |====================================                                                                                                                                                                       |  18%
+| Assign 9 to x using x <- 9.
+
+> x <- 9
+
+| You are doing so well!
+  |==========================================                                                                                                                                                                 |  21%
+| Now take a look at objects that are in your workspace using ls().
+
+> ls()
+[1] "x"
+
+| You got it right!
+  |===============================================                                                                                                                                                            |  23%
+| List all the files in your working directory using list.files() or dir().
+
+> list.files()
+[1] "First Swirl Exc.txt" "HelloWorld.md"       "hw1_data.csv"       
+[4] "README.md"          
+
+| Keep up the great work!
+  |====================================================                                                                                                                                                       |  26%
+| As we go through this lesson, you should be examining the help page for each new
+| function. Check out the help page for list.files with the command ?list.files.
+
+> dir()
+[1] "First Swirl Exc.txt" "HelloWorld.md"       "hw1_data.csv"       
+[4] "README.md"          
+
+| Almost! Try again. Or, type info() for more options.
+
+| Type ?list.files to see the help page.
+
+> ?list.file
+No documentation for ‘list.file’ in specified packages and libraries:
+you could try ‘??list.file’
+
+| Not quite, but you're learning! Try again. Or, type info() for more options.
+
+| Type ?list.files to see the help page.
+
+> ??list.file
+
+| That's not exactly what I'm looking for. Try again. Or, type info() for more options.
+
+| Type ?list.files to see the help page.
+
+> ?list.files
+
+| You are quite good my friend!
+  |=========================================================                                                                                                                                                  |  28%
+| One of the most helpful parts of any R help file is the See Also section. Read that
+| section for list.files. Some of these functions may be used in later portions of this
+| lesson.
+
+...nxt()
+  |==============================================================                                                                                                                                             |  31%
+| Using the args() function on a function name is also a handy way to see what arguments
+| a function can take.
+
+...nxt()
+  |====================================================================                                                                                                                                       |  33%
+| Use the args() function to determine the arguments to list.files().
+
+> args(list.files())
+NULL
+
+| That's not exactly what I'm looking for. Try again. Or, type info() for more options.
+
+| Type args(list.files) to see the arguments to list.files.
+
+> args(list.files)
+function (path = ".", pattern = NULL, all.files = FALSE, full.names = FALSE, 
+    recursive = FALSE, ignore.case = FALSE, include.dirs = FALSE, 
+    no.. = FALSE) 
+NULL
+
+| All that practice is paying off!
+  |=========================================================================                                                                                                                                  |  36%
+| Assign the value of the current working directory to a variable called "old.dir".
+
+> old.dir <- getpwd()
+Error in getpwd() : could not find function "getpwd"
+> old.dir <- getwd()
+
+| You're the best!
+  |==============================================================================                                                                                                                             |  38%
+| We will use old.dir at the end of this lesson to move back to the place that we
+| started. A lot of query functions like getwd() have the useful property that they
+| return the answer to the question as a result of the function.
+
+...nxt()
+  |===================================================================================                                                                                                                        |  41%
+| Use dir.create() to create a directory in the current working directory called
+| "testdir".
+
+> dir.create("testdir")
+
+| That's correct!
+  |========================================================================================                                                                                                                   |  44%
+| We will do all our work in this new directory and then delete it after we are done.
+| This is the R analog to "Take only pictures, leave only footprints."
+
+...nxt()
+  |==============================================================================================                                                                                                             |  46%
+| Set your working directory to "testdir" with the setwd() command.
+
+> setwd("testdir")
+
+| All that practice is paying off!
+  |===================================================================================================                                                                                                        |  49%
+| In general, you will want your working directory to be someplace sensible, perhaps
+| created for the specific project that you are working on. In fact, organizing your
+| work in R packages using RStudio is an excellent option. Check out RStudio at
+| http://www.rstudio.com/
+
+...nxt()
+  |========================================================================================================                                                                                                   |  51%
+| Create a file in your working directory called "mytest.R" using the file.create()
+| function.
+
+> file.create("mytest.R")
+[1] TRUE
+
+| Great job!
+  |=============================================================================================================                                                                                              |  54%
+| This should be the only file in this newly created directory. Let's check this by
+| listing all the files in the current directory.
+
+> ls()
+[1] "old.dir" "x"      
+
+| Keep trying! Or, type info() for more options.
+
+| list.files() shows that the directory only contains mytest.R.
+
+> list.files()
+[1] "mytest.R"
+
+| That's a job well done!
+  |===================================================================================================================                                                                                        |  56%
+| Check to see if "mytest.R" exists in the working directory using the file.exists()
+| function.
+
+> file.exist("mytest.R")
+Error in file.exist("mytest.R") : could not find function "file.exist"
+> file.exists("mytest.R")
+[1] TRUE
+
+| All that hard work is paying off!
+  |========================================================================================================================                                                                                   |  59%
+| These sorts of functions are excessive for interactive use. But, if you are running a
+| program that loops through a series of files and does some processing on each one, you
+| will want to check to see that each exists before you try to process it.
+
+...nxt()
+  |=============================================================================================================================                                                                              |  62%
+| Access information about the file "mytest.R" by using file.info().
+
+> file.info("mytest.R")
+         size isdir mode               mtime               ctime               atime uid
+mytest.R    0 FALSE  644 2017-08-29 10:35:54 2017-08-29 10:35:54 2017-08-29 10:35:54 501
+         gid         uname grname
+mytest.R  20 sergiocardona  staff
+
+| You are amazing!
+  |==================================================================================================================================                                                                         |  64%
+| You can use the $ operator --- e.g., file.info("mytest.R")$mode --- to grab specific
+| items.
+
+...nxt()
+  |=======================================================================================================================================                                                                    |  67%
+| Change the name of the file "mytest.R" to "mytest2.R" by using file.rename().
+
+> file.rename("mytest.R", "mytest2.R")
+[1] TRUE
+
+| Keep working like that and you'll get there!
+  |=============================================================================================================================================                                                              |  69%
+| Your operating system will provide simpler tools for these sorts of tasks, but having
+| the ability to manipulate files programatically is useful. You might now try to delete
+| mytest.R using file.remove('mytest.R'), but that won't work since mytest.R no longer
+| exists. You have already renamed it.
+
+...nxt()
+  |==================================================================================================================================================                                                         |  72%
+| Make a copy of "mytest2.R" called "mytest3.R" using file.copy().
+
+> file.copy("mytest2.R","mytest3.R")
+[1] TRUE
+
+| Your dedication is inspiring!
+  |=======================================================================================================================================================                                                    |  74%
+| You now have two files in the current directory. That may not seem very interesting.
+| But what if you were working with dozens, or millions, of individual files? In that
+| case, being able to programatically act on many files would be absolutely necessary.
+| Don't forget that you can, temporarily, leave the lesson by typing play() and then
+| return by typing nxt().
+
+...nxt()
+  |============================================================================================================================================================                                               |  77%
+| Provide the relative path to the file "mytest3.R" by using file.path().
+
+> file.path("mytest3.R")
+[1] "mytest3.R"
+
+| You are really on a roll!
+  |=================================================================================================================================================================                                          |  79%
+| You can use file.path to construct file and directory paths that are independent of
+| the operating system your R code is running on. Pass 'folder1' and 'folder2' as
+| arguments to file.path to make a platform-independent pathname.
+
+> file.path("folder1","folder2")
+[1] "folder1/folder2"
+
+| Perseverance, that's the answer.
+  |=======================================================================================================================================================================                                    |  82%
+| Take a look at the documentation for dir.create by entering ?dir.create . Notice the
+| 'recursive' argument. In order to create nested directories, 'recursive' must be set
+| to TRUE.
+
+> ?dir.create
+
+| That's the answer I was looking for.
+  |============================================================================================================================================================================                               |  85%
+| Create a directory in the current working directory called "testdir2" and a
+| subdirectory for it called "testdir3", all in one command by using dir.create() and
+| file.path().
+
+> ?file.path
+> dir.create(file.path(testdir2,testdir3))
+Error in file.path(testdir2, testdir3) : object 'testdir2' not found
+> dir.create(file.path("testdir2","testdir3"))
+Warning message:
+In dir.create(file.path("testdir2", "testdir3")) :
+  cannot create dir 'testdir2/testdir3', reason 'No such file or directory'
+
+| Not quite! Try again. Or, type info() for more options.
+
+| dir.create(file.path('testdir2', 'testdir3'), recursive = TRUE) will do the trick. If
+| you forgot the recursive argument, the command may have appeared to work, but it
+| didn't create the nested directory.
+
+> dir.create(file.path("testdir2","testdir3"), recursive = TRUE)
+
+| All that practice is paying off!
+  |=================================================================================================================================================================================                          |  87%
+| Go back to your original working directory using setwd(). (Recall that we created the
+| variable old.dir with the full path for the orginal working directory at the start of
+| these questions.)
+
+> info(dir.create)
+Error in info(dir.create) : unused argument (dir.create)
+> info("dir.create")
+Error in info("dir.create") : unused argument ("dir.create")
+> info
+function () 
+{
+    swirl_out(s() %N% "When you are at the R prompt (>):")
+    swirl_out(s() %N% "-- Typing skip() allows you to skip the current question.", 
+        skip_before = FALSE)
+    swirl_out(s() %N% "-- Typing play() lets you experiment with R on your own; swirl will ignore what you do...", 
+        skip_before = FALSE)
+    swirl_out(s() %N% "-- UNTIL you type nxt() which will regain swirl's attention.", 
+        skip_before = FALSE)
+    swirl_out(s() %N% "-- Typing bye() causes swirl to exit. Your progress will be saved.", 
+        skip_before = FALSE)
+    swirl_out(s() %N% "-- Typing main() returns you to swirl's main menu.", 
+        skip_before = FALSE)
+    swirl_out(s() %N% "-- Typing info() displays these options again.", 
+        skip_before = FALSE, skip_after = TRUE)
+    invisible()
+}
+<environment: namespace:swirl>
+
+| Give it another try. Or, type info() for more options.
+
+| Use setwd(old.dir).
+
+> setwd(old.dir)
+
+| Keep up the great work!
+  |======================================================================================================================================================================================                     |  90%
+| It is often helpful to save the settings that you had before you began an analysis and
+| then go back to them at the end. This trick is often used within functions; you save,
+| say, the par() settings that you started with, mess around a bunch, and then set them
+| back to the original values at the end. This isn't the same as what we have done here,
+| but it seems similar enough to mention.
+
+...nxt()
+  |===========================================================================================================================================================================================                |  92%
+| After you finish this lesson delete the 'testdir' directory that you just left (and
+| everything in it)
+
+...nxt()
+  |=================================================================================================================================================================================================          |  95%
+| Take nothing but results. Leave nothing but assumptions. That sounds like 'Take
+| nothing but pictures. Leave nothing but footprints.' But it makes no sense! Surely our
+| readers can come up with a better motto . . .
+
+...nxt()
+  |======================================================================================================================================================================================================     |  97%
+| In this lesson, you learned how to examine your R workspace and work with the file
+| system of your machine from within R. Thanks for playing!
+
+...nxt()
+  |===========================================================================================================================================================================================================| 100%
+| Would you like to receive credit for completing this course on Coursera.org?
+
+1: Yes
+2: No
+
+Selection: 1
+What is your email address? sergio.cardona3@gmail.com
+What is your assignment token? 5aKG612UStxcwbCf
+Grade submission succeeded!
+
+| That's a job well done!
+
+| You've reached the end of this lesson! Returning to the main menu...
+
+| Please choose a course, or type 0 to exit swirl.
+
+1: R Programming
+2: Take me to the swirl course repository!
+
+Selection: 
