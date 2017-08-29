@@ -1,0 +1,31 @@
+a <- available.packages()
+head(rowname(a),3)
+a <- available.packages()
+head(rowname(a),3)
+head(rownames(a),3)
+head(rownames(a),40)
+install.packages("slidify")
+install.packages("ggplot2")
+source("http://bioconductor.org/bioclite.R")
+biocLite()
+source("http://bioconductor.org/biocLite.R")
+biocLite()
+library(ggplot2)
+search()
+install.package("KernSmooth")
+install.package("kernsmooth")
+install.package("ggplot2")
+install.packages("KernSmooth")
+library(KernSmooth)
+clear
+cls
+cl
+exit
+getwd()
+getwd()
+ls()
+ls()
+ll()
+clear
+cls
+getwd()
