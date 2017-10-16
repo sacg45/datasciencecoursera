@@ -1,31 +1,250 @@
-a <- available.packages()
-head(rowname(a),3)
-a <- available.packages()
-head(rowname(a),3)
-head(rownames(a),3)
-head(rownames(a),40)
-install.packages("slidify")
-install.packages("ggplot2")
-source("http://bioconductor.org/bioclite.R")
-biocLite()
-source("http://bioconductor.org/biocLite.R")
-biocLite()
-library(ggplot2)
-search()
-install.package("KernSmooth")
-install.package("kernsmooth")
-install.package("ggplot2")
-install.packages("KernSmooth")
-library(KernSmooth)
-clear
-cls
-cl
-exit
-getwd()
+newfile <- read.csv("hw1_data.csv", "r", nrow = 2, sep = ",")
+newfile <- read.csv("hw1_data.csv", nrow = 2, sep = ",")
+newfile
+newfile <- read.csv("hw1_data.csv", nrow = 2)
+new file
+newfile
+newfile <- data.matrix(read.csv("hw1_data.csv", nrow = 2))
+nrows(newfile)
+nrow(newfile)
+newfile <- data.matrix(read.csv("hw1_data.csv"))
+nrow(newfile)
+newfile <- data.matrix(read.csv("hw1_data.csv", nrow = -2))
+newfile
+newfile <- read.csv("hw1_data.csv", nrow = -2)
+newfile
+newfile <- read.csv("hw1_data.csv", nrow = 2, skip = 151)
+newfile
+newfile <- read.csv("hw1_data.csv")
+ew file
+new file
+newfile
+data.frame(newfile)
+matrix <- data.frame(newfile)
+matrix
+matrix[47,]
+matrix
+bad <- is.na(matrix$Ozone)
+nrow(matrix[!bad])
+bad
+matrix[bad]
+matrix[bad][,]
+matrix[,][bad]
+matrix
+bad
+matrix[!bad]
+matrix[!bad,]
+matrix[,!bad]
+matrix[!bad,]
+nrow(matrix[!bad,])
+nrow(matrix[bad,])
+matrix[bad,Ozone]
+matrix[bad,"Ozone"]
+matrix[!bad,"Ozone"]
+matrix[!bad,"Ozone"]
+sum(matrix[!bad,"Ozone"])
+mean(matrix[!bad,"Ozone"])
+matrix[matrix$Ozone > 31,]
+matrix[matrix$Ozone > 31 and !bad,]
+matrix[!bad,][matrix$Ozone >31,]
+result1 <- matrix[!bad,]
+result1
+result1[result1$Ozone>31,]
+result2 <- result1[result1$Ozone>31,]
+result3 <- result2[result2$Temp>90,]
+result3
+result3$Solar.R
+mean(result$Solar.R)
+mean(result3$Solar.R)
+matrix
+mean(matrix[matrix$Month = 6,])
+mean(matrix[matrix$Month == 6,])
+matrix["Month"=6,]
+matrix[matrix$Month=6,]
+matrix[matrix$Month=6]
+matrix[matrix$Month = 6]
+matrix[matrix$Month == 6]
+matrix[matrix$Month == 6,]
+matrix[matrix$Month == 6,"Month"]
+matrix[matrix$Month == 6,"Temp"]
+mean(matrix[matrix$Month == 6,"Temp"])
+max(matrix[matrix$Month == 5,"Ozone"])
+max(result1[result1$Month == 5,"Ozone"])
+newfile
+install.package("swirl")
+install.packages("swirl")
+install.packages("swirl")
+packageVersion("swirl")
+library(swirl)
+ls
+rm(list=ls())
+swilr()
+swirl()
+5+7
+x <- 5+7
+x
+y <- x - 3
+y
+z <- c(1.1, 9 , 3.14)
+?c
+z
+c(c, 55, z)
+c(z,555,z)
+z*2 + 100
+my_sqrt <- sqrt(z-1)
+mysqrt
+my_sqrt
+my_div <- z/my_sqrt
+my_div
+c(1,2,3,4) + c(0,10)
+c(1,2,3,4) + c(0,10, 100)
+z*2 + 1000
+my_div
+swirl()
+clear()
+ls()
+cat("\104")
+swirl()
 getwd()
 ls()
+x <- 9
 ls()
-ll()
+list.files()
+dir()
+?list.file
+??list.file
+?list.files
+args(list.files())
+args(list.files)
+old.dir <- getpwd()
+old.dir <- getwd()
+dir.create("testdir")
+setwd("testdir")
+file.create("mytest.R")
+ls()
+list.files()
+file.exist("mytest.R")
+file.exists("mytest.R")
+file.info("mytest.R")
+file.rename("mytest.R", "mytest2.R")
+file.copy("mytest2.R","mytest3.R")
+file.path("mytest3.R")
+file.path("folder1","folder2")
+?dir.create
+?file.path
+dir.create(file.path(testdir2,testdir3))
+dir.create(file.path("testdir2","testdir3"))
+dir.create(file.path("testdir2","testdir3"), recursive = TRUE)
+info(dir.create)
+info("dir.create")
+info
+setwd(old.dir)
+swirl()
+1:20
+pi:10
+15:1
+3+2
+$`:`
+?`:`
+seq(1,20)
+seq(0,10, by = 0.5)
+my_seq <- seq(5, 10, length = 30)
+length(my_seq)
+1:length(my_seq)
+seq(along.with = my_seq)
+seq_along(my_seq)
+rep(0, times = 40)
+rep(c(0,1,2), times = 10)
+rep(c(0,1,2), each = 10)
+swirl()
+num_vect <- c(0.5, 55, -10, 6)
+tf <- num_vect < 1
+tf
+num_vect >=6
+my_char <- c("My", "name","is")
+my_char
+paste(my_char, collapse = " ")
+my_name <- c(my_char, "Sergio Andres")
+my_name
+paste(my_name, collapse = " ")
+paste("Hello", "World!", sep =" ")
+paste("Hello", "world!", sep =" ")
+paste(1:3, c("X","Y", "Z"),sep ="")
+paste(LETTERS, 1:4, sep"-")
+paste(LETTERS, 1:4, sep="-")
+swirl
+swirl()
+X <- c(44,NA,5,NA)
+x <- c(44,NA,5,NA)
+x*3
+y <- rnorm(1000)
+z <- rep(NA, 1000)
+my_data <- sample(c(y,z), 100)
+play()
+c(y,z)
+nxt()
+my_na <- is.na(my_data)
+my_na
+my_data == NA
+sum(my_data)
+sum(my_na)
+my_data
+0/0
+Inf - Inf
+swirl()
+swirl()
+x
+x[1:10]
+x[is.na(x)]
+y <- x[is.na(x)]
+y <- x[!is.na(x)]
+y
+y[y>0]
+x[x>0]
+x[!is.na(x) & x>0]
+c(x[[3]],x[[5]],x[[7]])
+x[c(3,5,7)]
+x[0]
+x[3000]
+x[c(-2,-10)]
+x[-c(2,10)]
+vect <- c(foo=11, bar=Z, norf=NA)
+vect <- c(foo=11, bar=2, norf=NA)
+vect
+names(vect)
+vect2 <- c(11,2,NA)
+names(vect2) <- c("foo","bar","norf")
+identical(vect,vect2)
+vect["bar"]
+vect[c("foo","bar")]
+my_vector <- 1:20
+my_vector <- 1:20
+my_vector
+dim(my_vector)
+length(my_vector)
+dum(my_vectir) <- c(4,5)
+dim(my_vectir) <- c(4,5)
+dim(my_vector) <- c(4,5)
+dim(my_vector)
+attibutes(my_vector)
+attributes(my_vector)
+my_vector
+class(my_vector)
+my_matrix <- my_vector
+?matrix
+matrix(1:20, nrow = 4,ncol = 5)
+my_matrix2 <- matrix(1:20, nrow = 4, ncol =5 )
+identical(my_matrix, my_matrix2)
+patients <- c("Bill","Gina","Kelly","Sean")
+cbind(patients, my_matrix)
+my_data <- dataframe(patients, my_matrix)
+my_data <- data.frame(patients, my_matrix)
+my-data
+my_data
+class(my_data)
+cnames <- c("patient", "age", "weight", "bp","rating", "test")
+colnames(my_data) <- cnames
+my_data
 clear
-cls
-getwd()
+clear()
+load("/Users/sergiocardona/Desktop/test.RData")
